@@ -1,0 +1,394 @@
+:root {
+    --primary-color: #5A00CE;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --secondary-bg-color: #f8f8f8;
+    --table-header-color: #744bd4;
+  }
+  
+  body.dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --secondary-bg-color: #1e1e1e;
+    --table-header-color: #482b8e;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav div a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo i {
+    margin-right: 0.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Form Section */
+  .form-section {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  form input, form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    outline: none;
+  }
+  
+  form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: var(--table-header-color);
+  }
+  
+  /* Table Section */
+  .table-section {
+    padding: 2rem 1rem;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: var(--table-header-color);
+    color: white;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: var(--secondary-bg-color);
+  }
+  
+  table tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1 1 30%;
+    margin: 0.5rem;
+  }
+  
+  .footer-about p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #e0e0e0;
+  }
+  
+  .footer-contact p {
+    margin: 0.5rem 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #e0e0e0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom i {
+    color: #ff4d4d;
+    margin: 0 0.2rem;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-left: 64PX;
+    }
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 1rem;
+      width: 200px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    form input, form button {
+      width: 100%;
+    }
+  }
+  
+
+  :root {
+    --primary-color: #5A00CE;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --secondary-bg-color: #f8f8f8;
+    --table-header-color: #744bd4;
+  }
+  
+  body.dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --secondary-bg-color: #1e1e1e;
+    --table-header-color: #482b8e;
+  }
+  /* About Section */
+  .about-section {
+    padding: 2rem 1rem;
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .about-section p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  /* Dark Mode Styles */
+
+
+body.dark .theme-toggle {
+  color: white; 
+}
+
+.theme-toggle {
+  color: #ffffff; 
+}
+
+/* Table row hover styles in dark mode */
+body.dark .table-container tr {
+  transition: background-color 0.3s ease;
+}
+
+body.dark .delete-btn {
+  border-color: white;
+  color: white;
+}
+
+body.dark .table-container tr:hover {
+  background-color: #444; /* Darker background on hover */
+  color: white; /* Ensure text stays white */
+}
+
+body.dark .table-container tr td {
+  color: white; /* Ensure the text is white by default */
+}
+
+/* Table row hover in light mode */
+body.light .table-container tr:hover {
+  background-color: #f1f1f1; /* Light background on hover */
+  color: black; /* Default text color */
+}
+.delete-btn{
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon:hover {
+  animation: beat 1s infinite; /* Apply beating animation */
+}
+
+/* Keyframes for beating effect */
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2); /* Slightly enlarge */
+    opacity: 0.8;
+  }
+}
